@@ -2,7 +2,6 @@ local v = vim.opt
 local g = vim.g
 
 g.mapleader = ' '
-g.maplocalleader = ' '
 
 v.relativenumber = true
 v.swapfile = false
