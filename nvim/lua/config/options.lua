@@ -1,8 +1,6 @@
 local v = vim.opt
 local g = vim.g
 
-g.mapleader = ' '
-
 v.relativenumber = true
 v.swapfile = false
 v.backup = false

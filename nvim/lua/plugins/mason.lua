@@ -22,6 +22,7 @@ return {
       ensure_installed = {
         'clangd',
         'lua_ls',
+        'texlab',
       },
       automatic_installation = true,
     })

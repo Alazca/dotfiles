@@ -76,5 +76,33 @@ return {
         },
       },
     }
+
+    lspconfig.texlab.setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {
+        texlab = {
+          auxDirectory = ".",
+          bibtexFormatter = "texlab",
+          build = {
+            executable = "tectonic",
+            args = {
+              "-X",
+              "compile",
+              "%f",
+              "--synctex",
+              "--keep-logs",
+              "--keep-intermediates"
+            },
+            forwardSearchAfter = true,
+            onSave = false
+          }
+        },
+        latexFormatter = "latexindent",
+        latexindent = {
+          modifyLineBreaks = false
+        }
+      }
+    }
   end,
 }

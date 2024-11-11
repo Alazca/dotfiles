@@ -11,6 +11,7 @@ return {
       treesitter.setup({ -- enable syntax highlighting
         highlight = {
           enable = true,
+          disable = { "latex", }
         },
         additional_vim_regex_highlighting = false,
         -- enable indentation
@@ -29,7 +30,7 @@ return {
           'bash',
           'lua',
           'python',
-          'latex',
+          'latex'
         },
         incremental_selection = {
           enable = true,

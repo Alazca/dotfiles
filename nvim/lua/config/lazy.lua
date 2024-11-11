@@ -13,5 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Needed for LazyLoading
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 
 require('lazy').setup('plugins')
