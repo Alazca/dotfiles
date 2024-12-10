@@ -3,7 +3,7 @@ Language:        Cpp
 # BasedOnStyle:  LLVM
 AccessModifierOffset: -2
 AlignAfterOpenBracket: BlockIndent 
-AlignArrayOfStructures: Right 
+AlignArrayOfStructures: None
 AlignConsecutiveAssignments:
   Enabled:         false
   AcrossEmptyLines: false
@@ -40,17 +40,17 @@ AlignTrailingComments:
   OverEmptyLines:  0
 AllowAllArgumentsOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
-AllowShortBlocksOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Never
 AllowShortCaseLabelsOnASingleLine: false
 AllowShortEnumsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: Inline 
+AllowShortFunctionsOnASingleLine: None 
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: false
-AlwaysBreakAfterDefinitionReturnType: All
-AlwaysBreakAfterReturnType: All 
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None 
 AlwaysBreakBeforeMultilineStrings: false
-AlwaysBreakTemplateDeclarations: yes 
+AlwaysBreakTemplateDeclarations: true 
 AttributeMacros:
   - __capability
 BinPackArguments: true
@@ -67,7 +67,7 @@ BraceWrapping:
   AfterObjCDeclaration: false
   AfterStruct:     false
   AfterUnion:      false
-  BeforeCatch:     true 
+  BeforeCatch:     false
   BeforeElse:      false
   BeforeLambdaBody: false
   BeforeWhile:     false
@@ -168,14 +168,14 @@ PenaltyReturnTypeOnItsOwnLine: 60
 PointerAlignment: Left 
 PPIndentWidth:   -1
 QualifierAlignment: Leave
-ReferenceAlignment: Left 
+ReferenceAlignment: Pointer
 ReflowComments:  true
 RemoveBracesLLVM: false
 RemoveParentheses: Leave
 RemoveSemicolon: false
 RequiresClausePosition: OwnLine
 RequiresExpressionIndentation: OuterScope
-SeparateDefinitionBlocks: Always 
+SeparateDefinitionBlocks: Leave
 ShortNamespaceLines: 1
 SortIncludes:    CaseSensitive
 SortJavaStaticImport: Before
@@ -233,4 +233,3 @@ WhitespaceSensitiveMacros:
   - PP_STRINGIZE
   - STRINGIZE
 ...
-
