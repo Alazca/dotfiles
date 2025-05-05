@@ -7,7 +7,7 @@ return {
   },
   config = function()
     -- import lspconfig plugin
-    local lspconfig = require 'lspconfig'
+    local lspconfig = vim.lsp
 
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require 'cmp_nvim_lsp'
@@ -59,68 +59,14 @@ return {
     end
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    lspconfig.clangd.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-    }
-
-    lspconfig.lua_ls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { 'vim' },
-          },
-        },
-      },
-    }
-
-    lspconfig.texlab.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        texlab = {
-          auxDirectory = ".",
-          bibtexFormatter = "texlab",
-          build = {
-            executable = "tectonic",
-            args = {
-              "-X",
-              "compile",
-              "%f",
-              "--synctex",
-              "--keep-logs",
-              "--keep-intermediates"
-            },
-            forwardSearchAfter = true,
-            onSave = false
-          }
-        },
-        latexFormatter = "latexindent",
-        latexindent = {
-          modifyLineBreaks = false
-        },
-        root_markers = { "main.tex" },
-      }
-    }
-
-    lspconfig.pyright.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "python" },
-    }
-
-    lspconfig.cssmodules_ls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = {
-        "javascript",
-      },
-      root_markers = {
-        "package.json",
-
-      }
-    }
+    lspconfig.enable( 'clangd' )
+    lspconfig.enable( 'lua_ls' )
+    lspconfig.enable( 'texlab' )
+    lspconfig.enable( 'pyright' )
+    lspconfig.enable( 'cssmodules_ls' )
+    lspconfig.enable( 'html' )
+    lspconfig.enable( 'ast_grep' )
+    lspconfig.enable( 'cmake' )
+    lspconfig.enable( 'cssls' )
   end,
 }

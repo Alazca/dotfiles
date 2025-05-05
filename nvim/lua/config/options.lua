@@ -31,6 +31,7 @@ v.autochdir = false
 v.iskeyword:append('-')
 v.splitbelow = true
 v.splitright = true
+v.foldenable = false
 
 v.clipboard:append('unnamedplus')
 g.loaded_netrw = 1

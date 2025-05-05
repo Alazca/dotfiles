@@ -7,12 +7,16 @@ return {
         lua = { 'stylua' },
         c = { 'clang_format' },
         cpp = { 'clang_format' },
-        -- Conform will run multiple formatters sequentially
-        -- python = { "isort", "black" },
+        latex = { 'tex-fmt' },
+        python = { 'black' },
+        javascript = { 'prettier' },
+        html = { 'prettier' },
+        sql = { 'sql_formatter' },
       },
       format_on_save = {
+        -- These options will be passed to conform.format()
         timeout_ms = 500,
-        lsp_fallback = true,
+        lsp_format = "fallback",
       },
     }
   end,

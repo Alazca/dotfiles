@@ -23,6 +23,11 @@ return {
         'clangd',
         'lua_ls',
         'texlab',
+        'cssls',
+        'html',
+        'pyright',
+        'cmake',
+        'ast_grep',
       },
       automatic_installation = true,
     })

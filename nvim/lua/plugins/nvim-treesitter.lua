@@ -24,13 +24,17 @@ return {
         ensure_installed = {
           'c',
           'cpp',
+          'cmake',
           'json',
           'markdown',
-          'markdown_inline',
           'bash',
           'lua',
           'python',
-          'latex'
+          'latex',
+          'css',
+          'gitignore',
+          'http',
+          'sql',
         },
         incremental_selection = {
           enable = true,
